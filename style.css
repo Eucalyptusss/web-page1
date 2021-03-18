@@ -58,7 +58,35 @@ button{
 #button4:active, #button4.lit{
   background: yellow;
 }
-#button10{
+#timer1:active{
+  background: black;
+  text-align: center;
+}
+#timer2:active{
+  background: black;
+  text-align: center;
+}
+#timer3:active{
+  background: black;
+  text-align: center;
+}
+#timer4:active{
+  background: black;
+  text-align: center;
+}
+#timer5:active{
+  background: black;
+  text-align: center;
+}
+#timer6:active{
+  background: black;
+  text-align: center;
+}
+#timer7:active{
+  background: black;
+  text-align: center;
+}
+#timer8:active{
   background: black;
   text-align: center;
 }
