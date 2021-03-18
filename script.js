@@ -90,23 +90,23 @@ function guess(btn){
   if(!gamePlaying){
     return;
   }
-  if(btn==pattern[guessCounter]){
-    if (progress == pattern.length-1){
-      winGame();
-      
-    
-    else{
-      progress++;
-      playClueSequence();
-    }}
-  
-  else{
-    guessCounter++;
+  if(pattern[guessCounter] == btn){
+    if(progress=guessCounter){
+      if(progress == pattern.length - 1){
+        winGame();
+      }else{
+        progress++;
+        playClueSequence();
+      }
+    }else{
+      guessCounter++;
+    }
+  }else{
+    loseGame();
   }
-  }
+}    
   
-  
-}
+
 
 
 //Page Initialization
