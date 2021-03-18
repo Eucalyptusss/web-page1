@@ -24,7 +24,7 @@ function startGame(){
   // initialize game variables
   
   for(let i=0;i<=pattern.length-1;i++){
-    pattern[i]=randomInt(1,4);
+    pattern[i]=randomInt(1,5);
   }
   
   progress=0;
