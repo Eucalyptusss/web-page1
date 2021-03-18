@@ -12,6 +12,7 @@ var progress =0;
 var gamePlaying = false;
 var tonePlaying=false;
 var volume=.5;
+var guessCounter=0;
 
 function startGame(){
   // initialize game variables
@@ -64,6 +65,7 @@ function playSingleClue(btn){
 }
 //play the sequence with this function
 function playClueSequence(){
+  guessCounter=0;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
@@ -81,6 +83,16 @@ function loseGame(){
 function winGame(){
   stopGame();
   alert("Game Over. You won!");
+}
+
+function guess(btn){
+  console.log("user guessed: " + btn);
+  if(!gamePlaying){
+    return;
+  }
+  if(btn)
+
+  // add game logic here
 }
 
 //Page Initialization
