@@ -94,6 +94,11 @@ function winGame(){
   alert("Game Over. You won!");
 }
 
+function randomInt(){
+  
+  
+}
+
 function guess(btn){
   console.log("user guessed: " + btn);
   console.log("the correct anwser was " + pattern[guessCounter]);
