@@ -20,7 +20,7 @@ var guessCounter=0;
 function startGame(){
   // initialize game variables
   for(let i=0;i<=pattern.length-1;i++){
-    pattern[i]=randomInt(4,1);
+    pattern[i]=randomInt(1,4);
   }
   
   progress=0;
@@ -103,7 +103,7 @@ function winGame(){
 }
 
 function randomInt(min, max){
-  return Math.floor(Math.random() * (max-min)); 
+  return Math.floor(Math.random() * (max-min)+min); 
   
 }
 

@@ -1,17 +1,23 @@
 /* CSS files add styling rules to your content */
 
 body {
-  background-color: slategrey;
-  color:  white;
-  
+  background-color: solid white;
+  color:  black;
+  text-align: center
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
+  border: 10px solid violet;
+  border-radius: 5px;
+  
 }
 
 h1 {
   font-family: verdana, arial,sans-serif;
   font-style: italic;
-  color: #373fff;
+  color: black;
+  text-align: center;
+  
+  
 }
 button{
   padding:10px;
