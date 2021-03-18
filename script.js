@@ -18,9 +18,11 @@ var volume=.5;
 var guessCounter=0;
 var timerCounter=0;
 var interval;
+var timerReseter=8;
 
 function startGame(){
   // initialize game variables
+  
   for(let i=0;i<=pattern.length-1;i++){
     pattern[i]=randomInt(1,4);
   }
@@ -83,25 +85,27 @@ function playSingleClue(btn){
   }
 }
 function startTimer(){
-  interval=setInterval()(timer,2000);
+  interval=setInterval(timer,2000);
   
 }
 function timer(){
   
   timerCounter++;
-  document.getElementById("timer"+timerCounter).classList.add("hiddenTimer");
+  document.getElementById("timer"+timerCounter).classList.add("hidden");
+  timerResetter=timerCounter
   if(timerCounter==8){loseGame()}
   
 }
 function resetTimer(){
-  for(let i=1;i<=8;i++){
-    document.getElementById("timer"+i).classList.remove("hiddenTimer");
+  clearInterval(interval);
+  for(let i=8;i>=0;i--){
+    document.getElementById("timer"+i).classList.remove("hidden");
   }
   
 }
 //play the sequence with this function
 function playClueSequence(){
-  //document.getElementById("timer1").classList.add("hidden");
+  
   startTimer()
   guessCounter=0;
   let delay = nextClueWaitTime; //set delay to initial wait time
@@ -137,9 +141,9 @@ function guess(btn){
   if(pattern[guessCounter] == btn){
     if(guessCounter==progress){
       if(progress == pattern.length - 1){
+        resetTimer();
         winGame();
       }else{
-        console.log("The else statement")
         progress++;
         resetTimer();
         playClueSequence();
@@ -148,6 +152,7 @@ function guess(btn){
       guessCounter++;
     }
   }else{
+    resetTimer();
     loseGame();
   }
 }    
