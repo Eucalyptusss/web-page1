@@ -58,3 +58,7 @@ button{
 #button4:active, #button4.lit{
   background: yellow;
 }
+#button10{
+  background: black;
+  text-align: center;
+}
