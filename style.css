@@ -26,6 +26,10 @@ button{
 .hidden{
   display:none;
 }
+.hiddenTimer{
+  background: white;
+}
+
 
 #gameButtonArea > button{
   width:200px;
@@ -58,35 +62,35 @@ button{
 #button4:active, #button4.lit{
   background: yellow;
 }
-#timer1:active{
+#timer1{
   background: black;
   text-align: center;
 }
-#timer2:active{
+#timer2{
   background: black;
   text-align: center;
 }
-#timer3:active{
+#timer3{
   background: black;
   text-align: center;
 }
-#timer4:active{
+#timer4{
   background: black;
   text-align: center;
 }
-#timer5:active{
+#timer5{
   background: black;
   text-align: center;
 }
-#timer6:active{
+#timer6{
   background: black;
   text-align: center;
 }
-#timer7:active{
+#timer7{
   background: black;
   text-align: center;
 }
-#timer8:active{
+#timer8{
   background: black;
   text-align: center;
 }

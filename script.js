@@ -83,20 +83,20 @@ function playSingleClue(btn){
 }
 function timer(){
   timerCounter++;
-  document.getElementById("timer"+timerCounter).classList.add("active");
+  document.getElementById("timer"+timerCounter).classList.add("hiddenTimer");
   if(timerCounter==8){loseGame()}
   
 }
 function resetTimer(){
   for(let i=1;i<=8;i++){
-    document.getElementById("timer"+timerCounter).classList.add("active");
+    document.getElementById("timer"+i).classList.remove("hiddenTimer");
   }
   
 }
 //play the sequence with this function
 function playClueSequence(){
-  
-  setInterval(timer, 3000);
+  document.getElementById("timer1").classList.add("active");
+  setInterval(timer(), 10);
   guessCounter=0;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
@@ -135,6 +135,7 @@ function guess(btn){
       }else{
         console.log("The else statement")
         progress++;
+        resetTimer();
         playClueSequence();
       }
     }else{
