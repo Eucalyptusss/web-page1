@@ -16,6 +16,7 @@ var gamePlaying = false;
 var tonePlaying=false;
 var volume=.5;
 var guessCounter=0;
+var timerCounter=0;
 
 function startGame(){
   // initialize game variables
@@ -80,8 +81,22 @@ function playSingleClue(btn){
     setTimeout(clearButton,clueHoldTime,btn);
   }
 }
+function timer(){
+  timerCounter++;
+  document.getElementById("timer"+timerCounter).classList.add("active");
+  if(timerCounter==8){loseGame()}
+  
+}
+function resetTimer(){
+  for(let i=1;i<=8;i++){
+    document.getElementById("timer"+timerCounter).classList.add("active");
+  }
+  
+}
 //play the sequence with this function
 function playClueSequence(){
+  
+  setInterval(timer, 3000);
   guessCounter=0;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
