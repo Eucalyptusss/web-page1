@@ -1,6 +1,6 @@
 // global constants
 const clueHoldTime=1000; //how long to hold each clue's. light/sound
-const cluePauseTime = 10; //how long to pause in between clues
+const cluePauseTime = 100; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 
@@ -19,7 +19,9 @@ var guessCounter=0;
 
 function startGame(){
   // initialize game variables
-  int n=0;
+  for(let i=0;i<=pattern.length-1;i++){
+    pattern[i]=randomInt(4,1);
+  }
   
   progress=0;
   console.log("the value of patter 0 is "+ pattern[0]);
@@ -101,7 +103,7 @@ function winGame(){
 }
 
 function randomInt(min, max){
-  return Math.ceiling(Math.random() * (max-min)); 
+  return Math.floor(Math.random() * (max-min)); 
   
 }
 
