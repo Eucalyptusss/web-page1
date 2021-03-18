@@ -1,6 +1,6 @@
 // global constants
 const clueHoldTime=1000; //how long to hold each clue's. light/sound
-const cluePauseTime = 333; //how long to pause in between clues
+const cluePauseTime = 10; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 
@@ -25,7 +25,7 @@ function startGame(){
 
 //Functions for lighting or clearing a button
 function lightButton(btn){
-  document.getElementById("button"+btn).classList.add("Lit")
+  document.getElementById("button"+btn).classList.add("lit")
 }
 function clearButton(btn){
   document.getElementById("button"+btn).classList.remove("lit")
@@ -96,6 +96,7 @@ function winGame(){
 
 function guess(btn){
   console.log("user guessed: " + btn);
+  console.log("the correct anser was " + pattern[guessCounter]);
   if(!gamePlaying){
     return;
   }
