@@ -90,10 +90,24 @@ function guess(btn){
   if(!gamePlaying){
     return;
   }
-  if(btn)
-
-  // add game logic here
+  if(btn==pattern[guessCounter]){
+    if (progress == pattern.length-1){
+      winGame();
+      
+    
+    else{
+      progress++;
+      playClueSequence();
+    }}
+  
+  else{
+    guessCounter++;
+  }
+  }
+  
+  
 }
+
 
 //Page Initialization
 // Init Sound Synthesizer
