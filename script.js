@@ -96,15 +96,16 @@ function winGame(){
 
 function guess(btn){
   console.log("user guessed: " + btn);
-  console.log("the correct anser was " + pattern[guessCounter]);
+  console.log("the correct anwser was " + pattern[guessCounter]);
   if(!gamePlaying){
     return;
   }
   if(pattern[guessCounter] == btn){
-    if(progress=guessCounter){
+    if(guessCounter==progress){
       if(progress == pattern.length - 1){
         winGame();
       }else{
+        console.log("The else statement")
         progress++;
         playClueSequence();
       }
