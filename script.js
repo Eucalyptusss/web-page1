@@ -19,7 +19,16 @@ function startGame(){
   progress=0;
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
-document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
+  playClueSequence();
+}
+
+//Functions for lighting or clearing a button
+function lightButton(btn){
+  document.getElementById("button"+btn).classList.add("Lit")
+}
+function clearButton(btn){
+  document.getElementById("button"+btn).classList.remove("lit")
 }
 function stopGame(){  
   gamePlaying = false;
@@ -118,11 +127,3 @@ g.connect(context.destination)
 g.gain.setValueAtTime(0,context.currentTime)
 o.connect(g)
 o.start(0)
-
-//Functions for lighting or clearing a button
-function lightButton(btn){
-  document.getElementById("button"+btn).classList.add("Lit")
-}
-function clearButton(btn){
-  document.getElementById("button"+btn).classList.remove("lit")
-}
