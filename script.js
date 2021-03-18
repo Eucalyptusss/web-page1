@@ -7,7 +7,10 @@ const nextClueWaitTime = 1000; //how long to wait before starting playback of th
 
 
 //Global Variables
+
+
 var pattern=[2, 2, 4, 3, 2, 1, 2, 4];
+var pattern;
 var progress =0;
 var gamePlaying = false;
 var tonePlaying=false;
@@ -16,7 +19,10 @@ var guessCounter=0;
 
 function startGame(){
   // initialize game variables
+  int n=0;
+  
   progress=0;
+  console.log("the value of patter 0 is "+ pattern[0]);
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -94,8 +100,8 @@ function winGame(){
   alert("Game Over. You won!");
 }
 
-function randomInt(){
-  
+function randomInt(min, max){
+  return Math.ceiling(Math.random() * (max-min)); 
   
 }
 
