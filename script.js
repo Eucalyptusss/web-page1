@@ -18,7 +18,7 @@ var volume=.5;
 var guessCounter=0;
 var timerCounter=0;
 var interval;
-var timerReseter=8;
+var timerResetter=9;
 
 function startGame(){
   // initialize game variables
@@ -92,15 +92,18 @@ function timer(){
   
   timerCounter++;
   document.getElementById("timer"+timerCounter).classList.add("hidden");
-  timerResetter=timerCounter
+  timerResetter=timerCounter;
   if(timerCounter==8){loseGame()}
   
 }
 function resetTimer(){
+  timerCounter=0;
   clearInterval(interval);
-  for(let i=8;i>=0;i--){
+  if(timerResetter==9) return;
+  for(let i=1;i<=timerResetter;i++){
     document.getElementById("timer"+i).classList.remove("hidden");
   }
+  timerResetter=9;
   
 }
 //play the sequence with this function
