@@ -32,7 +32,7 @@ function startGame(){
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
-  document.getElementById("button1").classList.add("notSpooky");
+  
   playClueSequence();
 }
 
@@ -49,7 +49,7 @@ function stopGame(){
 document.getElementById("stopBtn").classList.add("hidden");
   
 }
-document.getElementById("spookyBtn").addEventListenter("click", document.getElementById("button1").style.backgroundColor='black');
+
 
 // swap the Start and Stop BUttons
 // Sound Synthesis Functions
@@ -92,11 +92,7 @@ function startTimer(){
   interval=setInterval(timer,2000);
   
 }
-//This function changes the game's theme to spooky
-function spookify(){
-  document.getElementById("button1").classList.add("spooky");
-  
-}
+
 //this is the function. called if the interval reaches the alloted time
 function timer(){
   if(gamePlaying==false) {
