@@ -1,7 +1,7 @@
 /* CSS files add styling rules to your content */
 
 body {
-  background-color: solid white;
+  background-image: solid white;
   color:  black;
   text-align: center
   font-family: Papyrus, Monaco, Fantasy;
@@ -33,6 +33,7 @@ button{
 
 
 
+
 #gameButtonArea > button{
   width:200px;
   height:200px;
@@ -41,12 +42,22 @@ button{
 }
 #button1{
   background: lightgreen;
+ 
 }
+
 #button1:active, #button1.lit{
   background: green;
 }
+#button1:spooky{
+  background: tan;
+}
+#button1:active, #button1.lit, #button1.spooky{
+ background: orange;
+  
+}
 
 #button2{
+  
   background: lightblue;
 }
 #button2:active, #button2.lit{
@@ -101,7 +112,7 @@ button{
 }
 #spookyBtn{
   background: orange;
-  font: bold;
+  font-style: bold;
   
   
 }

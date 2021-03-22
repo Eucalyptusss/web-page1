@@ -89,6 +89,10 @@ function startTimer(){
   interval=setInterval(timer,2000);
   
 }
+//This function changes the game's theme to spooky
+function spookify(){
+  document.getElementById("")
+}
 //this is the function. called if the interval reaches the alloted time
 function timer(){
   
