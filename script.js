@@ -32,6 +32,7 @@ function startGame(){
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("button1").classList.add("notSpooky");
   playClueSequence();
 }
 
@@ -95,7 +96,10 @@ function spookify(){
 }
 //this is the function. called if the interval reaches the alloted time
 function timer(){
-  
+  if(gamePlaying==false) {
+    resetTimer();
+    return;
+  }
   timerCounter++;
   document.getElementById("timer"+timerCounter).classList.add("hidden");
   timerResetter=timerCounter;

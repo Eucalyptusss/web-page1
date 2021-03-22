@@ -30,7 +30,12 @@ button{
   display:white;
   background: white;
 }
-
+.spooky{
+  
+}
+.notSpooky{
+  
+}
 
 
 
@@ -40,12 +45,13 @@ button{
   margin:2px;
   
 }
-#button1{
+
+#button1:notSpooky{
   background: lightgreen;
  
 }
 
-#button1:active, #button1.lit{
+#button1:active, #button1.lit, #button1.notSpooky{
   background: green;
 }
 #button1:spooky{
