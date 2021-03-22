@@ -26,12 +26,9 @@ button{
 .hidden{
   display:none;
 }
-.hiddenTimer{
-  display:white;
-  background: white;
-}
+
 .spooky{
-  
+  background: tan;
 }
 .notSpooky{
   
@@ -52,8 +49,8 @@ button{
 #button1:active, #button1.lit{
   background: green;
 }
-#button1:spooky, #button1:active, #butt{
-  background: tan;
+#button1:spooky, #button1.active, #button1.lit{
+  background: orange;
 }
 #button2{
   

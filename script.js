@@ -49,6 +49,8 @@ function stopGame(){
 document.getElementById("stopBtn").classList.add("hidden");
   
 }
+document.getElementById("spookyBtn").addEventListenter("click", document.getElementById("button1").style.backgroundColor='black');
+
 // swap the Start and Stop BUttons
 // Sound Synthesis Functions
 const freqMap = {
