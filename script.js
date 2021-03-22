@@ -84,10 +84,12 @@ function playSingleClue(btn){
     setTimeout(clearButton,clueHoldTime,btn);
   }
 }
+//starts timer
 function startTimer(){
   interval=setInterval(timer,2000);
   
 }
+//this is the function. called if the interval reaches the alloted time
 function timer(){
   
   timerCounter++;
@@ -96,6 +98,7 @@ function timer(){
   if(timerCounter==8){loseGame()}
   
 }
+//Resets the timer bar.
 function resetTimer(){
   timerCounter=0;
   clearInterval(interval);

@@ -20,7 +20,7 @@
     <p>
       Welcome to Memory Mayem, the light and sound memory game! This game is designed to test your 
       memory. Please repeat the light pattern that you see. Every round will introduce
-      another step to the same pattern. Make sure to answer before 
+      another random step to the same pattern. Make sure to answer before 
       the timer bar fills up at the bottom! Good Luck!
     </p>
     <button id="startBtn" onclick="startGame()">
@@ -28,6 +28,10 @@
     </button>
     <button id="stopBtn" class="hidden" onclick="stopGame()">  
       Stop
+    </button>
+    <button id="spookyBtn" onclick="spookify()">
+      Spookify
+      
     </button>
     <div id="gameButtonArea">
       <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
@@ -48,6 +52,7 @@
      <div id="timerbar">
       
     </div>  
+  
     
 
   </body>

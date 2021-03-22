@@ -32,6 +32,7 @@ button{
 }
 
 
+
 #gameButtonArea > button{
   width:200px;
   height:200px;
@@ -97,4 +98,10 @@ button{
 #timer8{
   background: black;
   text-align: center;
+}
+#spookyBtn{
+  background: orange;
+  font: bold;
+  
+  
 }
