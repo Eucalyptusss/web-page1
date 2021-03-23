@@ -44,7 +44,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
+https://ezgif.com/video-to-gif/ezgif-7-5fb4c98faa81.mov
 
 
 ## Reflection Questions
