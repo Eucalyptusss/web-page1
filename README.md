@@ -35,6 +35,11 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app!
+1. Better aesthetic.
+2. Tally bar displaying the mistakes.
+3. Different visual themes.
+4. Various difficulties.
+
 
 ## Video Walkthrough
 

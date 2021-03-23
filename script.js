@@ -24,6 +24,7 @@ var mistakeCounter=0;
 function startGame(){
   // initialize game variables
   
+  
   for(let i=0;i<=pattern.length-1;i++){
     pattern[i]=randomInt(1,7);
   }
@@ -185,6 +186,7 @@ function guess(btn){
     resetTimer();
     loseGame();}
     else {
+      document.getElementById("mistakeAudio").play();
       mistakeCounter++;
     }
     
