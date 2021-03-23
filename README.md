@@ -67,13 +67,26 @@ playback the sequence while the timer bar disappears, meaning they have to go fa
 challenges. One of them was that the timer bar was resetting after the winFame()/loseGame() funtions were called, this was an easy fix because I implemented
 a resetTimer() method. The other challenge was that I needed to start the timer interval and have a function that is executed at the end of each interval. This
 was a problem because, initially, I tried to set the interval at the start of each turn which continiously gave me errors. This led me to 
-find a common way to use the setInterval() function is by setting up it's own variable which I called interval.
+find a common way to use the setInterval() function is by setting up it's own variable which I called interval. Once these two problems were
+solved I had a functioning timer bar developed. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+The first question I have is what is the best way to allow the user to change colors/backrounds/borders/fonts of the entire page. I wanted
+to add themes to the page but I could not find an effective way to allow the user to press a button that would change the visual landscape
+of the entire page?
+Another question I have is what, if any, is the performance cost of adding audio files and images compared to just using
+the build in libraries?
+A third question is how do I hide elements from the user? 
+How can I let the user upload various file types and do something with the file from the webpage?
+How can I track and store user data?
+How do I use other api's on the webpage?
+How do I make hyperlinks?
+
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+The first thing I would do is make it an aethetically pleasing game. This means the fonts/borders/backgrounds/images/sounds would be relational to develop a whole picture
+game that is appealing to the human eye. This would also inclue redoing the timer bar to something  Secondly, I would add 4 different game types, easy, medium, hard, and endless. The endless mode would actually just be a very high amount
+of indexes (maybe 3042) in the pattern array and it would inclue a global highscore. 
 
 
 
