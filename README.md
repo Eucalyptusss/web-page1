@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 2. Tally bar displaying the mistakes.
 3. Different visual themes.
 4. Various difficulties.
-
+5. High scores
 
 ## Video Walkthrough
 
@@ -49,10 +49,25 @@ Here's a walkthrough of implemented user stories:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+https://www.w3schools.com/JS/js_random.asp
+https://www.w3.org/Style/Examples/007/center.en.html
+https://www.w3schools.com/css/css_border.asp
+https://www.w3schools.com/css/css_border_rounded.asp
+https://tutorialdeep.com/knowhow/css-align-button-right-left-center-position/
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+https://www.w3schools.com/cssref/pr_background-image.asp
+
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+A challenge I encountered was developing a way to time the player. At the start of the problem I was unfamiliar with the set interval function
+and how I would go about making a moving timer without a good amount of research. So, I used what I did know of making buttons disappear and just
+needed to check the documentation for setInterval(). I made a line of buttons that will start to disappear at the start of the round using the
+.hidden class that was given to us. This also makes higher rounds more challenging because the player must still wait for the computer to 
+playback the sequence while the timer bar disappears, meaning they have to go faster each round. This timer bar method only introduced a two more
+challenges. One of them was that the timer bar was resetting after the winFame()/loseGame() funtions were called, this was an easy fix because I implemented
+a resetTimer() method. The other challenge was that I needed to start the timer interval and have a function that is executed at the end of each interval. This
+was a problem because, initially, I tried to set the interval at the start of each turn which continiously gave me errors. This led me to 
+find a common way to use the setInterval() function is by setting up it's own variable which I called interval.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
@@ -64,7 +79,7 @@ Here's a walkthrough of implemented user stories:
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright John Welsh
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
