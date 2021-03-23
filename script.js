@@ -1,5 +1,5 @@
 // global constants
-const clueHoldTime=1000; //how long to hold each clue's. light/sound
+ //how long to hold each clue's. light/sound
 const cluePauseTime = 100; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
@@ -8,7 +8,7 @@ const nextClueWaitTime = 1000; //how long to wait before starting playback of th
 
 //Global Variables
 
-
+const clueHoldTime=1075;
 var pattern=[2, 2, 4, 3, 2, 1, 2, 4];
 var pattern;
 var progress =0;
@@ -30,7 +30,7 @@ function startGame(){
   // initialize game variables
   
   for(let i=0;i<=pattern.length-1;i++){
-    pattern[i]=randomInt(1,5);
+    pattern[i]=randomInt(1,7);
   }
   freqMap ={
     1:randomInt(50,500),
@@ -98,15 +98,17 @@ function stopTone(){
 
 //playing a single clue
 function playSingleClue(btn){
+  clueHoldTime=clueHoldTime-75;
   if(gamePlaying){
     lightButton(btn);
     playTone(btn,clueHoldTime);
     setTimeout(clearButton,clueHoldTime,btn);
   }
+  
 }
 //starts timer
 function startTimer(){
-  interval=setInterval(timer,2000);
+  interval=setInterval(timer,3000);
   
 }
 
