@@ -19,6 +19,12 @@ var guessCounter=0;
 var timerCounter=0;
 var interval;
 var timerResetter=9;
+var sone=100;
+var stwo=200;
+var sthree=300;
+var sfour=400;
+var sfive=500;
+var ssix=500;
 
 function startGame(){
   // initialize game variables
@@ -26,6 +32,7 @@ function startGame(){
   for(let i=0;i<=pattern.length-1;i++){
     pattern[i]=randomInt(1,5);
   }
+  freq
   
   progress=0;
   console.log("the value of patter 0 is "+ pattern[0]);
@@ -53,11 +60,11 @@ document.getElementById("stopBtn").classList.add("hidden");
 
 // swap the Start and Stop BUttons
 // Sound Synthesis Functions
-const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+var freqMap = {
+  1: sone,
+  2: stwo,
+  3: sthree,
+  4: sfour,
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
