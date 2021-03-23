@@ -21,6 +21,15 @@ var interval;
 var timerResetter=9;
 var mistakeCounter=0;
 
+var freqMap = {
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+}
+
 function startGame(){
   // initialize game variables
   
@@ -63,14 +72,7 @@ document.getElementById("stopBtn").classList.add("hidden");
 
 // swap the Start and Stop BUttons
 // Sound Synthesis Functions
-var freqMap = {
-  1: 100,
-  2: 200,
-  3: 300,
-  4: 400,
-  5: 500,
-  6: 600,
-}
+
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
   g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
@@ -185,7 +187,7 @@ function guess(btn){
     resetTimer();
     loseGame();}
     else {
-      document.getElementById("mistakeAudio").play();
+      
       mistakeCounter++;
     }
     
