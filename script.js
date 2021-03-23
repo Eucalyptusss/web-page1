@@ -8,7 +8,7 @@ const nextClueWaitTime = 1000; //how long to wait before starting playback of th
 
 //Global Variables
 
-const clueHoldTime=1075;
+var clueHoldTime=1075;
 var pattern=[2, 2, 4, 3, 2, 1, 2, 4];
 var pattern;
 var progress =0;
@@ -19,12 +19,7 @@ var guessCounter=0;
 var timerCounter=0;
 var interval;
 var timerResetter=9;
-var sone=100;
-var stwo=200;
-var sthree=300;
-var sfour=400;
-var sfive=500;
-var ssix=500;
+var mistakeCounter=0;
 
 function startGame(){
   // initialize game variables
@@ -98,7 +93,7 @@ function stopTone(){
 
 //playing a single clue
 function playSingleClue(btn){
-  clueHoldTime=clueHoldTime-75;
+  
   if(gamePlaying){
     lightButton(btn);
     playTone(btn,clueHoldTime);
@@ -137,7 +132,7 @@ function resetTimer(){
 }
 //play the sequence with this function
 function playClueSequence(){
-  
+  clueHoldTime=clueHoldTime-75;
   startTimer()
   guessCounter=0;
   let delay = nextClueWaitTime; //set delay to initial wait time
@@ -151,11 +146,13 @@ function playClueSequence(){
 
 function loseGame(){
   stopGame();
+  mistakeCounter=0;
   alert("Game Over. You lost.");
 }
 
 function winGame(){
   stopGame();
+  mistakeCounter=0;
   alert("Game Over. You won!");
 }
 
@@ -184,8 +181,13 @@ function guess(btn){
       guessCounter++;
     }
   }else{
+    if(mistakeCounter>=3){
     resetTimer();
-    loseGame();
+    loseGame();}
+    else {
+      mistakeCounter++;
+    }
+    
   }
 }    
   
