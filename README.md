@@ -4,7 +4,7 @@
 
 Submitted by: **John Vincent Welsh**
 
-Time spent: **4** hours spent in total
+Time spent: 5 hours spent in total
 
 Link to project: (insert your link here, should start with https://glitch.com...)
 
@@ -59,7 +59,8 @@ https://www.w3schools.com/cssref/pr_background-image.asp
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-A challenge I encountered was developing a way to time the player. At the start of the problem I was unfamiliar with the set interval function
+
+  A challenge I encountered was developing a way to time the player. At the start of the problem I was unfamiliar with the set interval function
 and how I would go about making a moving timer without a good amount of research. So, I used what I did know of making buttons disappear and just
 needed to check the documentation for setInterval(). I made a line of buttons that will start to disappear at the start of the round using the
 .hidden class that was given to us. This also makes higher rounds more challenging because the player must still wait for the computer to 
@@ -71,6 +72,7 @@ find a common way to use the setInterval() function is by setting up it's own va
 solved I had a functioning timer bar developed. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+
 The first question I have is what is the best way to allow the user to change colors/backrounds/borders/fonts of the entire page. I wanted
 to add themes to the page but I could not find an effective way to allow the user to press a button that would change the visual landscape
 of the entire page?
@@ -84,9 +86,12 @@ How do I make hyperlinks?
 
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-The first thing I would do is make it an aethetically pleasing game. This means the fonts/borders/backgrounds/images/sounds would be relational to develop a whole picture
-game that is appealing to the human eye. This would also inclue redoing the timer bar to something  Secondly, I would add 4 different game types, easy, medium, hard, and endless. The endless mode would actually just be a very high amount
-of indexes (maybe 3042) in the pattern array and it would inclue a global highscore. 
+
+  The first thing I would do is make it an aethetically pleasing game. This means the fonts/borders/backgrounds/images/sounds would be relational to develop a whole picture
+game that is appealing to the human eye. This would also inclue redoing the timer bar to something like a digital timer countdown with sounds indicating
+the proximity to running out of time. Secondly, I would add 4 different game types, easy, medium, hard, and endless. The endless mode would actually just be a very high amount
+of indexes (maybe 3042) in the pattern array and it would inclue a global highscore. The last thing I would want to do is a visual tally counter that lets the player
+know how many mistakes they have made and each time a mistake is made a negative sound is played.
 
 
 
